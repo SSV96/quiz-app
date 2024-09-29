@@ -1,0 +1,9 @@
+State: Internal Data owned by the component ,components memory ,`
+
+Props: External data owned by parent component
+
+Context: Data that is shared across all components
+
+props cannpnt be modified by the child  component
+
+if props  changes then paretnt and child will re-render
