@@ -1,14 +1,9 @@
 import React from "react";
-import ListBox from "./movieList/ListBox";
+import ListBox from "./movieList/Box";
 import WatchedBox from "./watchedBox/WatchedBox";
 
-const Main = ({ movies }) => {
-  return (
-    <main className="main">
-      <ListBox movies={movies} />
-      <WatchedBox />
-    </main>
-  );
+const Main = ({ children }) => {
+  return <main className="main">{children}</main>;
 };
 
 export default Main;

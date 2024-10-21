@@ -1,6 +1,8 @@
 import NavBar from "./components/NavBar";
-import Logo from "./components/Logo";
+import MovieList from "./components/main/movieList/MovieList";
 import SearchBar from "./components/SearchBar";
+import Box from "./components/main/movieList/Box";
+import WatchedBox from "./components/main/watchedBox/WatchedBox";
 import NumResults from "./components/NumResults";
 import Main from "./components/main/Main";
 import { useState } from "react";
@@ -11,12 +13,23 @@ export default function App() {
   return (
     <>
       <NavBar movies={movies} setMovies={setMovies}>
-        <Logo />
-        <SearchBar />
+        {/* <SearchBar /> */}
         <NumResults movies={movies} />
       </NavBar>
 
-      <Main movies={movies} setMovies={setMovies} />
+      <Main>
+        <Box>
+          <MovieList movies={movies} />
+        </Box>
+
+        <Box>
+          <MovieList movies={movies} />
+        </Box>
+
+        <WatchedBox />
+      </Main>
+
+      {/* <Main movies={movies} setMovies={setMovies} /> */}
     </>
   );
 }
