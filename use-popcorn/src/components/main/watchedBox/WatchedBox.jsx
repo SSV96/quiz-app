@@ -5,7 +5,6 @@ import { tempWatchedData } from "../../../utils/movieData";
 import Summary from "./Summary";
 import WatchedMovieList from "./WatchedMovieList";
 const WatchedBox = () => {
-  const [watched, setWatched] = useState(tempWatchedData);
   const [isOpen2, setIsOpen2] = useState(true);
 
   return (
@@ -16,9 +15,7 @@ const WatchedBox = () => {
       >
         {isOpen2 ? "–" : "+"}
       </button>
-      {isOpen2 && (
-       
-      )}
+      {isOpen2 && <Summary />}
     </div>
   );
 };
